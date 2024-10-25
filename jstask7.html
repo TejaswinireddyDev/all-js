@@ -8,7 +8,7 @@
 <body>
     <script>
         // 1...check if a number is even or odd
-        var num=prompt("enter a number");
+        var num=+prompt("enter a number");
         if (num%2==0){
             alert(`${num} is even`)
         }
@@ -23,8 +23,8 @@
 
 
         // 2...compare two numbers
-        var num1=prompt("enter first number");
-        var num2=prompt("enter second number");
+        var num1=+prompt("enter first number");
+        var num2=+prompt("enter second number");
         if (num1>num2){
             alert(`${num1} is greater than ${num2}`)
         }
@@ -54,7 +54,7 @@
 
 
         // 3...Driving eligibility check
-        var age=prompt("enter your age");
+        var age=+prompt("enter your age");
         if (age>=18){
             alert("Do you have a valid driver's license (True/False): True")
             alert("You can drive")
@@ -76,7 +76,7 @@
 
 
         // 4...Determine if a number is positive, negative, or zero
-        var ip=prompt("Enter a number")
+        var ip=+prompt("Enter a number")
         if (ip>0){
             alert(`${ip} is positive`)
         }
