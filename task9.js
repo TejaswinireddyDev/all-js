@@ -16,12 +16,6 @@ hasInvitation=true;
 if (age1>=21 && hasInvitation==true){
     console.log("canEnterClub")
 }
-else if (age1>=21 && hasInvitation==false){
-    console.log("canEnterClub")
-}
-else if (age1<21 && hasInvitation==true){
-    console.log("canEnterClub")
-}
 else{
     console.log("canNotEnterClub")
 }
@@ -32,12 +26,6 @@ else{
 var age2=25;
 member=false;
 if (age2>=65 && member==true){
-    console.log("Eligible for Discount")
-}
-else if (age2>=65 && member==false){
-    console.log("Eligible for Discount")
-}
-else if (age2<65 && member==true){
     console.log("Eligible for Discount")
 }
 else{
@@ -51,12 +39,6 @@ var gpa=2.5;
 extracurriculars=true;
 recommendation=true;
 if (gpa>=3.5 && (extracurriculars==true || recommendation==true) ){
-    console.log("Student is Eligible for Scholarship")
-}
-else if (gpa>=3.5 && (extracurriculars==true || recommendation==false)){
-    console.log("Student is Eligible for Scholarship")
-}
-else if (gpa>=3.5 && (extracurriculars==false || recommendation==true)){
     console.log("Student is Eligible for Scholarship")
 }
 else{
