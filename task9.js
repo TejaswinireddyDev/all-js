@@ -13,7 +13,7 @@ else{
 // 2... admission to a club 
 var age1=22;
 hasInvitation=true;
-if (age1>=21 && hasInvitation==true){
+if (age1>=21 || hasInvitation==true){
     console.log("canEnterClub")
 }
 else{
@@ -25,7 +25,7 @@ else{
 // 3...discount eligibility
 var age2=25;
 member=false;
-if (age2>=65 && member==true){
+if (age2>=65 || member==true){
     console.log("Eligible for Discount")
 }
 else{
