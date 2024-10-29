@@ -1,6 +1,6 @@
 // 1.... voting eligibility
 var age=14;
-citizenship=true;
+var citizenship=true;
 if (age>=18 && citizenship==true){
     console.log("people can vote")
 }
@@ -12,7 +12,7 @@ else{
 
 // 2... admission to a club 
 var age1=22;
-hasInvitation=true;
+var hasInvitation=true;
 if (age1>=21 || hasInvitation==true){
     console.log("canEnterClub")
 }
@@ -24,7 +24,7 @@ else{
 
 // 3...discount eligibility
 var age2=25;
-member=false;
+var member=false;
 if (age2>=65 || member==true){
     console.log("Eligible for Discount")
 }
@@ -36,8 +36,8 @@ else{
 
 // 4...scholarship eligibility
 var gpa=2.5;
-extracurriculars=true;
-recommendation=true;
+var extracurriculars=true;
+var recommendation=true;
 if (gpa>=3.5 && (extracurriculars==true || recommendation==true) ){
     console.log("Student is Eligible for Scholarship")
 }
