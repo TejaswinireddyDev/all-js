@@ -1,0 +1,78 @@
+<!-- ID CARD -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+
+    <div id="main">
+        <img id="img1" >
+        <h1 id="name"></h1>
+        <p id="dev"></p>
+        <p id="idno"></p>
+        <p id="email"></p>
+        <p id="phn"></p>
+    </div>
+
+    <script>
+
+        let body=document.getElementById("body");
+        body.style.background="silver"
+        
+        let main=document.getElementById("main");
+        main.style.border="1px solid black";
+        main.style.height="400px";
+        main.style.width="250px";
+        main.style.borderRadius="10px";
+        main.style.background="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7r6z5U7FhfSgp6V0XGxLHgJ0KQzpokVqEA&s)";
+        main.style.backgroundSize="cover"
+        main.style.backgroundPosition="center";
+        main.style.margin="auto";
+        main.style.marginTop="100px";
+
+        let img=document.getElementById("img1");
+        // img1.style.border="1px solid black";
+        img1.style.height="110px";
+        img1.style.width="110px";
+        img1.style.marginTop="40px";
+        img1.style.marginLeft="68px";
+        img1.style.borderRadius="100px";
+        img1.style.background="url(../assects/images/tej.jpg)";
+        img1.style.backgroundSize="cover";
+
+        let name=document.getElementById("name");
+        name.innerHTML="TEJASWINI REDDY";
+        name.style.color="Red"
+        name.style.fontSize="20px";
+        name.style.fontFamily="calibri"
+        name.style.textAlign="center";
+
+        let dev=document.getElementById("dev");
+        dev.innerHTML="<b>DEVELOPER</b>";
+        dev.style.fontFamily="calibri"
+        dev.style.fontSize="12px"
+        dev.style.textAlign="center";
+
+        let id=document.getElementById="idno";
+        idno.innerHTML="<b>ID No :</b> 123456";
+        idno.style.textAlign="center";
+        idno.style.fontSize="15px";
+
+        let mail=document.getElementById="email";
+        email.innerHTML="<b>E-mail :</b> teju@gmail.com";
+        email.style.textAlign="center";
+        email.style.fontSize="15px";
+
+        let phone=document.getElementById="phn";
+        phn.innerHTML="<b>Phone :</b> 123456789";
+        phn.style.textAlign="center";
+        phn.style.fontSize="15px";
+        
+
+    </script>
+</body>
+</html>
