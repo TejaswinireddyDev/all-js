@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        background-color: burlywood;
+        /* margin-top: 250px; */
+      }
+      form{
+        margin-top: 250px;
+        margin-left:450px;
+        height: 250px;
+        width: 600px;
+        background-color: darkseagreen;
+        text-align: center;
+      }
+      #ip{
+        margin-top: 60px;
+        height: 40px;
+        width: 300px;
+        border: none;
+        color: white;
+      }
+      #sub{
+        height: 40px;
+        width:60px;
+        border: none;
+        color: white;
+      }
+      
+    </style>
+</head>
+<body>
+    <div>
+    <form id="form">
+        <input type="text" id="ip" placeholder="Add Items....." style="background-color:black">
+        <input type="submit" id="sub" value="Add" style="background-color:crimson;"><br>
+        <ul id="list"></ul>
+    </form>
+    
+    </div>
+    <script>
+        let form=document.getElementById("form")
+        let ip=document.getElementById("ip")
+        let list=document.getElementById("list")
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let listItem=document.createElement("li")
+            listItem.style.color="black"
+            listItem.style.marginLeft="100px"
+            listItem.style.textAlign="center"
+            listItem.innerText=ip.value+"  "
+            let btn=document.createElement("button")
+            btn.style.backgroundColor="red"
+            btn.style.color="white"
+            btn.addEventListener("click",()=>{
+                list.removeChild(listItem)
+            })
+            btn.innerHTML="DELETE";
+            listItem.appendChild(btn);
+            list.appendChild(listItem)
+            ip.value=" "
+        })
+    </script>    
+</body>
+</html>
