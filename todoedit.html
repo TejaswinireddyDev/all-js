@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do list</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: mistyrose;
+        color: #fff;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      /* Form Container */
+      #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid #e84118;
+        outline: none;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="text"]:focus {
+        border-color: #2575fc;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, background-color 0.3s;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+      }
+
+      /* Task List */
+      #list {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #list li {
+        background-color: #f7f7f7;
+        color: #333;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Buttons */
+      #list button {
+        background-color: #ff4757;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 10px;
+        transition: transform 0.2s ease, background-color 0.3s;
+      }
+
+      #list button:hover {
+        background-color: #e84118;
+        transform: scale(1.1);
+      }
+
+      #list button:nth-child(2) {
+        background-color: #3498db;
+      }
+
+      #list button:nth-child(2):hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <input type="text" id="input" placeholder="Add Tasks..." />
+        <input type="submit" value="Add" id="submit" />
+      </form>
+      <ul id="list"></ul>
+    </div>
+
+    <script>
+      let form = document.getElementById("form");
+      let input = document.getElementById("input");
+      let list = document.getElementById("list");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let listitem = document.createElement("li");
+        
+            listitem.innerText = input.value;
+        
+
+        let btn = document.createElement("button");
+        btn.innerText = "Delete";
+        btn.addEventListener("click", () => {
+          let confirmDeletion = window.confirm("Do you want to delete...?");
+          if (confirmDeletion) {
+            list.removeChild(listitem);
+          }
+        });
+
+        let edit = document.createElement("button");
+        edit.innerText = "Edit";
+        edit.addEventListener("click", () => {
+          let newtask = prompt("Edit Here");
+          if (newtask !== null && newtask !== "") {
+            listitem.firstChild.textContent = newtask;
+          }
+        });
+
+        listitem.append(btn);
+        listitem.append(edit);
+        list.append(listitem);
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
