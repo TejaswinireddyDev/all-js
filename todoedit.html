@@ -132,9 +132,14 @@
       form.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        if(input.value.trim()==''){
+          alert('please enter the task..')
+          return
+        }
+
         let listitem = document.createElement("li");
         
-            listitem.innerText = input.value;
+        listitem.innerText = input.value;
         
 
         let btn = document.createElement("button");
